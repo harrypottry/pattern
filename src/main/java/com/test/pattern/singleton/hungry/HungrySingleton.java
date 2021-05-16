@@ -14,7 +14,7 @@ package com.test.pattern.singleton.hungry;
     //浪费了内存，有可能占着茅坑不拉屎
 
     //绝对线程安全，在线程还没出现以前就是实例化了，不可能存在访问安全问题
-public class HungrySingleton {
+public class HungrySingleton implements Cloneable{
     //先静态、后动态
     //先属性、后方法
     //先上后下
@@ -28,11 +28,16 @@ public class HungrySingleton {
 
     private HungrySingleton(){}
 
-    private final static HungrySingleton instance = new HungrySingleton();
+    private final  static  HungrySingleton instance = new HungrySingleton();
 
     public static HungrySingleton getInstance() {
         return instance;
     }
 
 
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        //return instance; 防止破坏方案 或者不实现Cloneable
+        return super.clone();
+    }
 }

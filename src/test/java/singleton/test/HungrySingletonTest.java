@@ -5,16 +5,20 @@ import com.test.pattern.singleton.hungry.HungryStaticSingleton;
 
 public class HungrySingletonTest {
 
-    public static void main(String[] args) {
-//        HungrySingleton hungrySingleton1 = HungrySingleton.getInstance();
-//        HungrySingleton hungrySingleton2 = HungrySingleton.getInstance();
-//
-//        System.out.println(hungrySingleton1 == hungrySingleton2);
+    public static void main(String[] args) throws CloneNotSupportedException {
+        HungrySingleton hungrySingleton1 = HungrySingleton.getInstance();
+        HungrySingleton hungrySingleton2 = HungrySingleton.getInstance();
 
-        HungryStaticSingleton hungryStaticSingleton1 = HungryStaticSingleton.getInstance();
-        HungryStaticSingleton hungryStaticSingleton2 = HungryStaticSingleton.getInstance();
+        System.out.println(hungrySingleton1 == hungrySingleton2);
 
-        System.out.println(hungryStaticSingleton1 == hungryStaticSingleton2);
+        //HungryStaticSingleton hungryStaticSingleton1 = HungryStaticSingleton.getInstance();
+        //HungryStaticSingleton hungryStaticSingleton2 = HungryStaticSingleton.getInstance();
+        //
+        //System.out.println(hungryStaticSingleton1 == hungryStaticSingleton2);
 
+        // cloneable ÆÆ»µµ¥ÀýÄ£Ê½
+
+        HungrySingleton hungrySingletonClone = (HungrySingleton)HungrySingleton.getInstance().clone();
+        System.out.println(hungrySingleton1 == hungrySingletonClone);
     }
 }
