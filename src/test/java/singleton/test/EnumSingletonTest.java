@@ -48,32 +48,20 @@ public class EnumSingletonTest {
     /**
      * 通过反射破坏枚举式单例(jad.exe 工具)
      */
-    public static void main(String[] args) {
-//        try {
-//            //通过得知enum的反编译文件的构造方法为（String.class,int.class）
-//            Class clazz = EnumSingleton.class;
-//            Constructor c = clazz.getDeclaredConstructor(String.class,int.class);
-//            c.setAccessible(true);
-//            /**
-//             * jdk层面-》 newInstance:这就是为什么不能用反射创建枚举类型
-//             */
-//            EnumSingleton enumSingleton = (EnumSingleton)c.newInstance("test",666);
-//
-//        }catch (Exception e){
-//            e.printStackTrace();
-//        }
-
-        Class clazz = EnumSingleton.class;
-
-        try {
-            Constructor declaredConstructor = clazz.getDeclaredConstructor(String.class, int.class);
-            declaredConstructor.setAccessible(true);
-            Object o = declaredConstructor.newInstance();
-            System.out.println(o);
-        } catch (NoSuchMethodException | InvocationTargetException | InstantiationException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
-
-    }
+    //public static void main(String[] args) {
+    //    try {
+    //        //通过得知enum的反编译文件的构造方法为（String.class,int.class）
+    //        Class clazz = EnumSingleton.class;
+    //        Constructor c = clazz.getDeclaredConstructor(String.class,int.class);
+    //        c.setAccessible(true);
+    //        /**
+    //         * jdk层面-》 newInstance:这就是为什么不能用反射创建枚举类型
+    //         */
+    //        EnumSingleton enumSingleton = (EnumSingleton)c.newInstance("test",666);
+    //
+    //    }catch (Exception e){
+    //        e.printStackTrace();
+    //    }
+    //}
 
 }

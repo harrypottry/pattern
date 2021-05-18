@@ -14,16 +14,4 @@ public class HungryStaticSingleton {
 //    public static HungryStaticSingleton getInstance(){
 //        return  hungrySingleton;
 //    }
-
-    private HungryStaticSingleton(){}
-
-    private static HungryStaticSingleton hungryStaticSingleton;
-
-    static {
-        hungryStaticSingleton = new HungryStaticSingleton();
-    }
-
-    public static HungryStaticSingleton getInstance() {
-        return hungryStaticSingleton;
-    }
 }

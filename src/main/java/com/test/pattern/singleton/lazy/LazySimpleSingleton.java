@@ -30,15 +30,4 @@ public class LazySimpleSingleton {
 //        return lazy;
 //    }
 
-    private LazySimpleSingleton(){}
-
-    private static LazySimpleSingleton instance = null;
-
-    public static  LazySimpleSingleton getInstance() {
-        if(instance == null) {
-            instance = new LazySimpleSingleton();
-        }
-        return instance;
-    }
-
 }

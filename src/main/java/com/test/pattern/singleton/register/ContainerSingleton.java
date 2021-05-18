@@ -50,26 +50,4 @@ public class ContainerSingleton {
 //            }
 //        }
 //    }
-
-
-    private ContainerSingleton(){}
-
-    private static final Map<String, Object> factoryBeanInstanceCache = new ConcurrentHashMap<>();
-
-    public static Object getInstance (String className){
-        synchronized (factoryBeanInstanceCache) {
-            if (!factoryBeanInstanceCache.containsKey(className)) {
-                Object instance = null;
-                try {
-                    instance = Class.forName(className).newInstance();
-                    factoryBeanInstanceCache.put(className, instance);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                return instance;
-            }else {
-                return factoryBeanInstanceCache.get(className);
-            }
-        }
-    }
 }

@@ -17,11 +17,11 @@ public class ThreadLocalSingletonTest {
 //        System.out.println(ThreadLocalSingleton.getInstance());
 
         //子线程：分别获取到了不同的实例
-
-        Thread t1 = new Thread(new ExecutorThread());
-        Thread t2 = new Thread(new ExecutorThread());
-        t1.start();
-        t2.start();
-        System.out.println("finally");
+        //
+        //Thread t1 = new Thread(new ExecutorThread());
+        //Thread t2 = new Thread(new ExecutorThread());
+        //t1.start();
+        //t2.start();
+        //System.out.println("finally");
     }
 }

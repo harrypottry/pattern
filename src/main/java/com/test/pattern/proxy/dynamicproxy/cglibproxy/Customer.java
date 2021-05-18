@@ -5,7 +5,7 @@ package com.test.pattern.proxy.dynamicproxy.cglibproxy;
  */
 public class Customer {
 
-    public void findLove(){
-        System.out.println("儿子要求：肤白貌美大长腿");
+    public void findJob(){
+        System.out.println("要求：五险一金");
     }
 }

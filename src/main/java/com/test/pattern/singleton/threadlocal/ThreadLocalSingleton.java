@@ -14,11 +14,4 @@ public class ThreadLocalSingleton {
 //        return threadLocalSingleton.get();
 //    }
 
-    private ThreadLocalSingleton(){}
-
-    private final static ThreadLocal<ThreadLocalSingleton> singleton = ThreadLocal.withInitial(ThreadLocalSingleton::new);
-
-    public static ThreadLocalSingleton getInstance() {
-        return singleton.get();
-    }
 }

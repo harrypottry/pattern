@@ -7,21 +7,6 @@ import com.test.pattern.proxy.Person;
  */
 public class Father implements Person {
 
-//    private Son person;
-//
-//    public Father(Son person){
-//        this.person = person;
-//    }
-//
-//    public void findLove(){
-//        System.out.println("父亲物色对象");
-//        this.person.findLove();
-//        System.out.println("双方父母同意，确立关系");
-//    }
-//
-//    public void findJob(){
-//
-//    }
     private Son son;
 
     public Father(Son son) {
@@ -29,9 +14,9 @@ public class Father implements Person {
     }
 
     @Override
-    public void findLove() {
+    public void findJob() {
         before();
-        son.findLove();
+        son.findJob();
         after();
     }
 

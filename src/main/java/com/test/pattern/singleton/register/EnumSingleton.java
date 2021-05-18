@@ -22,9 +22,4 @@ public enum EnumSingleton {
 //    public static EnumSingleton getInstance(){
 //        return INSTANCE;
 //    }
-    INSTANCE;
-
-    public static EnumSingleton getInstance(){
-        return INSTANCE;
-    }
 }

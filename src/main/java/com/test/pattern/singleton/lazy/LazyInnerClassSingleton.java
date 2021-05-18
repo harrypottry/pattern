@@ -53,14 +53,4 @@ public class LazyInnerClassSingleton {
 //        private final static LazyInnerClassSingleton singleton = new LazyInnerClassSingleton();
 //    }
 
-     private LazyInnerClassSingleton (){}
-
-     private static class LazyHolder {
-         private final static LazyInnerClassSingleton instance = new LazyInnerClassSingleton();
-     }
-
-     public static LazyInnerClassSingleton getInstance() {
-         return LazyHolder.instance;
-     }
-
 }

@@ -5,5 +5,5 @@ package com.test.pattern.proxy;
  */
 public interface Person {
 
-    void findLove();
+    void findJob();
 }
