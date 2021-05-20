@@ -20,6 +20,9 @@ public class MyCustomer  {
     //    return obj;
     //}
 
+    public Object getInstance(Object target){
+        return MyProxy.newProxyInstance(new MyClassLoader(), target.getClass().getInterfaces(), (proxy, method, args) -> method.invoke(target, args));
+    }
     private void before(){
         System.out.println("我是媒婆，我要给你找对象，现在已经确认你的需求");
         System.out.println("开始物色");
