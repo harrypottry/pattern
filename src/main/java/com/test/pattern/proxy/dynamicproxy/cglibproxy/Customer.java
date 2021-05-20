@@ -6,6 +6,6 @@ package com.test.pattern.proxy.dynamicproxy.cglibproxy;
 public class Customer {
 
     public void findJob(){
-        System.out.println("要求：五险一金");
+        System.out.println(" cglib proxy ...");
     }
 }

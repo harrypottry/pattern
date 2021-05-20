@@ -1,21 +1,21 @@
 package com.test.principle.srp;
 
 /**
- * å•ä¸€èŒè´£åŸåˆ™ï¼šä¸€ä¸ªç±»å¤„ç†ä¸€ä»¶äº‹æƒ…
+ * µ¥Ò»Ö°ÔğÔ­Ôò£ºÒ»¸öÀà´¦ÀíÒ»¼şÊÂÇé
  */
 public class Course1 {
 
     public void study(String courseName){
-        if("ç›´æ’­è¯¾".equals(courseName)){
-            System.out.println(courseName + "ä¸èƒ½å¿«è¿›");
+        if("Ö±²¥¿Î".equals(courseName)){
+            System.out.println(courseName + "²»ÄÜ¿ì½ø");
         }else{
-            System.out.println(courseName + "å¯ä»¥åå¤å›çœ‹");
+            System.out.println(courseName + "¿ÉÒÔ·´¸´»Ø¿´");
         }
     }
 
     public static void main(String[] args) {
         Course1 course = new Course1();
-        course.study("ç›´æ’­è¯¾");
-        course.study("å½•æ’­è¯¾");
+        course.study("Ö±²¥¿Î");
+        course.study("Â¼²¥¿Î");
     }
 }

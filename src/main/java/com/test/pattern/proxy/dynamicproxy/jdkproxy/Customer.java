@@ -7,6 +7,6 @@ import com.test.pattern.proxy.Person;
  */
 public class Customer implements Person {
     public void findJob() {
-        System.out.println("proxy ...");
+        System.out.println("jdk proxy ...");
     }
 }

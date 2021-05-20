@@ -22,4 +22,20 @@ public enum EnumSingleton {
 //    public static EnumSingleton getInstance(){
 //        return INSTANCE;
 //    }
+
+    INSTANCE;
+
+    private Object Data;
+
+    public Object getData() {
+        return Data;
+    }
+
+    public void setData(Object data) {
+        Data = data;
+    }
+
+    public static EnumSingleton getInstance() {
+        return INSTANCE;
+    }
 }

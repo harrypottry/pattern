@@ -20,5 +20,14 @@ public class ContainerSingletonTest {
         //    e.printStackTrace();
         //}
 
+        try {
+            ConcurrentExecutor.execute(()->{
+                Object instance = ContainerSingleton.getInstance("singleton.test.Pojo");
+                System.out.println(System.currentTimeMillis() + ":" +instance);
+            }, 10, 6);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 }

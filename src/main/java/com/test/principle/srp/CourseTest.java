@@ -3,9 +3,9 @@ package com.test.principle.srp;
 public class CourseTest {
     public static void main(String[] args) {
         LiveCourse liveCourse = new LiveCourse();
-        liveCourse.study("ç›´æ’­è¯¾");
+        liveCourse.study("Ö±²¥¿Î");
         ReplayCourse replayCourse = new ReplayCourse();
-        replayCourse.study("å½•æ’­è¯¾");
+        replayCourse.study("Â¼²¥¿Î");
     }
 }
 

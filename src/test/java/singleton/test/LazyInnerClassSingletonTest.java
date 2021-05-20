@@ -33,5 +33,19 @@ public class LazyInnerClassSingletonTest {
 //        }catch (Exception e){
 //            e.printStackTrace();
 //        }
+
+        Class<?> lazyClass = LazyInnerClassSingleton.class;
+
+        Constructor<?> declaredConstructor = null;
+        try {
+            declaredConstructor = lazyClass.getDeclaredConstructor();
+            declaredConstructor.setAccessible(true);
+            Object o1 = declaredConstructor.newInstance();
+            Object o2 = declaredConstructor.newInstance();
+            System.out.println(o2 == o1);
+        } catch (NoSuchMethodException | InvocationTargetException | InstantiationException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
+
     }
 }
