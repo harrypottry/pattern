@@ -6,5 +6,4 @@ package com.test.pattern.factory.factorymethod;
  */
 public interface ICourseFactory {
 
-//    ICourse create();
 }
