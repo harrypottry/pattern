@@ -1,5 +1,6 @@
 package com.test.pattern.factory.factorymethod;
 
+import com.test.pattern.factory.ICourse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,16 +13,16 @@ public class FactoryMethodTest {
 
     public static void main(String[] args) {
 
-//        ICourseFactory factory = new PythonCourseFactory();
-//        ICourse course = factory.create();
-//        course.record();
-//
-//        factory = new JavaCourseFactory();
-//        course = factory.create();
-//        course.record();
+        ICourseFactory factory = new PythonCourseFactory();
+        ICourse course = factory.create();
+        course.record();
 
-//        ICourseFactory courseFactory = new JavaCourseFactory();
-//        ICourse iCourse = courseFactory.create();
-//        iCourse.record();
+        factory = new JavaCourseFactory();
+        course = factory.create();
+        course.record();
+
+        ICourseFactory courseFactory = new JavaCourseFactory();
+        ICourse iCourse = courseFactory.create();
+        iCourse.record();
     }
 }

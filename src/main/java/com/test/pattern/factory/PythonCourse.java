@@ -6,6 +6,6 @@ package com.test.pattern.factory;
 public class PythonCourse implements ICourse {
 
     public void record() {
-        System.out.println("å½•åˆ¶Pythonè¯¾ç¨‹");
+        System.out.println("Â¼ÖÆPython¿Î³Ì");
     }
 }

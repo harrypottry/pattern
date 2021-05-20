@@ -10,12 +10,10 @@ public class MyProxyTest {
 
     public static void main(String[] args) {
         try {
-
             //JDK动态代理的实现原理
             Person obj = (Person) new MyCustomer().getInstance(new Customer());
             System.out.println(obj.getClass());
             obj.findJob();
-
         }catch (Exception e){
             e.printStackTrace();
         }

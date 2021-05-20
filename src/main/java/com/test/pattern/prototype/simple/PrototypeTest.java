@@ -5,28 +5,26 @@ import java.util.List;
 
 /**
  * Created by zhangsan.
+ * Ç³¿½±´
  */
 public class PrototypeTest {
 
     public static void main(String[] args) {
 
-        // åˆ›å»ºä¸€ä¸ªå…·ä½“çš„éœ€è¦å…‹éš†çš„å¯¹è±¡
-        ConcretePrototypeA concretePrototype = new ConcretePrototypeA();
-        // å¡«å……å±æ€§ï¼Œæ–¹ä¾¿æµ‹è¯•
+        // ´´½¨Ò»¸ö¾ßÌåµÄĞèÒª¿ËÂ¡µÄ¶ÔÏó
+        ConcretePrototype concretePrototype = new ConcretePrototype();
+        // Ìî³äÊôĞÔ£¬·½±ã²âÊÔ
         concretePrototype.setAge(18);
-        concretePrototype.setName("prototype");
-        List hobbies = new ArrayList<String>();
-        concretePrototype.setHobbies(hobbies);
         System.out.println(concretePrototype);
 
-        // åˆ›å»ºClientå¯¹è±¡ï¼Œå‡†å¤‡å¼€å§‹å…‹éš†
-        Client client = new Client(concretePrototype);
-        ConcretePrototypeA concretePrototypeClone = (ConcretePrototypeA) client.startClone(concretePrototype);
+        // ´´½¨Client¶ÔÏó£¬×¼±¸¿ªÊ¼¿ËÂ¡
+        Client client = new Client();
+        ConcretePrototype concretePrototypeClone = (ConcretePrototype) client.startClone(concretePrototype);
         System.out.println(concretePrototypeClone);
 
-        System.out.println("å…‹éš†å¯¹è±¡ä¸­çš„å¼•ç”¨ç±»å‹åœ°å€å€¼ï¼š" + concretePrototypeClone.getHobbies());
-        System.out.println("åŸå¯¹è±¡ä¸­çš„å¼•ç”¨ç±»å‹åœ°å€å€¼ï¼š" + concretePrototype.getHobbies());
-        System.out.println("å¯¹è±¡åœ°å€æ¯”è¾ƒï¼š"+(concretePrototypeClone.getHobbies() == concretePrototype.getHobbies()));
+        System.out.println("¿ËÂ¡¶ÔÏóÖĞµÄÒıÓÃÀàĞÍµØÖ·Öµ£º" + concretePrototypeClone.getAge());
+        System.out.println("Ô­¶ÔÏóÖĞµÄÒıÓÃÀàĞÍµØÖ·Öµ£º" + concretePrototype.getAge());
+        System.out.println("¶ÔÏóµØÖ·±È½Ï£º"+(concretePrototypeClone.getAge() == concretePrototype.getAge()));
 
 
     }

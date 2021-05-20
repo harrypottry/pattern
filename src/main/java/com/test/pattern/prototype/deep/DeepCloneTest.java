@@ -1,26 +1,24 @@
 package com.test.pattern.prototype.deep;
 
 
-import java.util.ArrayList;
-
 public class DeepCloneTest {
 
     public static void main(String[] args) {
 
-        QiTianDaSheng qiTianDaSheng = new QiTianDaSheng();
+        Person person = new Person();
         try {
-            QiTianDaSheng clone = (QiTianDaSheng)qiTianDaSheng.clone();
-            System.out.println("深克隆：" + (qiTianDaSheng.jinGuBang == clone.jinGuBang));
+            Person clone = (Person) person.clone();
+            System.out.println("深克隆：" + (person.position == clone.position));
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        QiTianDaSheng q = new QiTianDaSheng();
-        QiTianDaSheng n = q.shallowClone(q);
-        System.out.println("浅克隆：" + (q.jinGuBang == n.jinGuBang));
+        Person q = new Person();
+        Person n = q.shallowClone(q);
+        System.out.println("浅克隆：" + (q.position == n.position));
+        System.out.println(q == n);
 
         //源码案例： clone
-        ArrayList arrayList = new ArrayList();
-
+//        ArrayList arrayList = new ArrayList();
     }
 }

@@ -7,12 +7,8 @@ import com.test.pattern.proxy.Person;
  */
 public class Son implements Person{
 
-    public void findJob(){
-
+    @Override
+    public void findJob() {
+        System.out.println("find job");
     }
-
-    public void eat(){
-
-    }
-
 }

@@ -7,6 +7,6 @@ package com.test.pattern.factory;
 public class JavaCourse implements ICourse {
 
     public void record() {
-        System.out.println("å½•åˆ¶Javaè¯¾ç¨‹");
+        System.out.println("Â¼ÖÆJava¿Î³Ì");
     }
 }

@@ -5,8 +5,7 @@ import com.test.pattern.proxy.Person;
 /**
  * Created by zhangsan on 2021/5/10.
  */
-public class Father implements Person {
-
+public class Father implements Person{
     private Son son;
 
     public Father(Son son) {
@@ -21,7 +20,6 @@ public class Father implements Person {
     }
 
     private void before() {
-
         System.out.println("before...");
     }
 

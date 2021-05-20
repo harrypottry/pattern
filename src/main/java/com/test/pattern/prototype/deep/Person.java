@@ -7,14 +7,14 @@ import java.util.Date;
 /**
  * Created by zhangsan.
  */
-public class QiTianDaSheng extends Monkey implements Cloneable,Serializable {
+public class Person extends Properties implements Cloneable,Serializable {
 
-    public JinGuBang jinGuBang;
+    public Position position;
 
-    public  QiTianDaSheng(){
+    public Person(){
         //只是初始化
         this.birthday = new Date();
-        this.jinGuBang = new JinGuBang();
+        this.position = new Position();
     }
 
     @Override
@@ -33,10 +33,9 @@ public class QiTianDaSheng extends Monkey implements Cloneable,Serializable {
             ByteArrayInputStream bis = new ByteArrayInputStream(bos.toByteArray());
             ObjectInputStream ois = new ObjectInputStream(bis);
 
-            QiTianDaSheng copy = (QiTianDaSheng)ois.readObject();
+            Person copy = (Person)ois.readObject();
             copy.birthday = new Date();
             return copy;
-
         }catch (Exception e){
             e.printStackTrace();
             return null;
@@ -45,15 +44,15 @@ public class QiTianDaSheng extends Monkey implements Cloneable,Serializable {
     }
 
 
-    public QiTianDaSheng shallowClone(QiTianDaSheng target){
+    public Person shallowClone(Person target){
 
-        QiTianDaSheng qiTianDaSheng = new QiTianDaSheng();
-        qiTianDaSheng.height = target.height;
-        qiTianDaSheng.weight = target.height;
+        Person person = new Person();
+        person.height = target.height;
+        person.weight = target.weight;
 
-        qiTianDaSheng.jinGuBang = target.jinGuBang;
-        qiTianDaSheng.birthday = new Date();
-        return  qiTianDaSheng;
+        person.position = target.position;
+        person.birthday = new Date();
+        return person;
     }
 
 
