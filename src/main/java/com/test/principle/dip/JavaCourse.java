@@ -4,7 +4,7 @@ public class JavaCourse implements ICourse {
 
     @Override
     public void study() {
-        System.out.println("tom 在学习 Java 课程");
+        System.out.println("tom ��ѧϰ Java �γ�");
 
     }
 

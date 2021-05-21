@@ -1,5 +1,6 @@
 package com.test.pattern.proxy.dynamicproxy.cglibproxy;
 
+
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
@@ -14,12 +15,7 @@ public class CglibProxy  {
     public Object getInstance (Class<?> clazz){
         Enhancer enhancer = new Enhancer();
         enhancer.setSuperclass(clazz);
-        enhancer.setCallback((MethodInterceptor) (obj, method, args, proxy) -> {
-            before();
-            Object o = proxy.invokeSuper(obj, args);
-            after();
-            return o;
-        });
+        enhancer.setCallback((MethodInterceptor) (obj, method, args, proxy) -> proxy.invokeSuper(obj, args));
         return enhancer.create();
     }
 

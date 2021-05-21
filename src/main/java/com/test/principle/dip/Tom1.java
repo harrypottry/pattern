@@ -1,18 +1,18 @@
 package com.test.principle.dip;
 
 /**
- * ç°åœ¨ zhangsan è¿˜æƒ³å­¦ä¹  AI äººå·¥æ™ºèƒ½çš„è¯¾ç¨‹ã€‚
- * è¿™ä¸ªæ—¶å€™ï¼Œä¸šåŠ¡æ‰©å±•ï¼Œæˆ‘ä»¬çš„ä»£ç è¦ä»åº•å±‚åˆ°é«˜å±‚ï¼ˆè°ƒç”¨å±‚ï¼‰ä¸€æ¬¡ä¿®æ”¹ä»£ç ã€‚
- * åœ¨ zhangsan ç±»ä¸­å¢åŠ  studyAICourse()çš„æ–¹æ³•ï¼Œåœ¨é«˜å±‚ä¹Ÿè¦è¿½åŠ è°ƒç”¨ã€‚
+ * ÏÖÔÚ zhangsan »¹ÏëÑ§Ï° AI ÈË¹¤ÖÇÄÜµÄ¿Î³Ì¡£
+ * Õâ¸öÊ±ºò£¬ÒµÎñÀ©Õ¹£¬ÎÒÃÇµÄ´úÂëÒª´Óµ×²ãµ½¸ß²ã£¨µ÷ÓÃ²ã£©Ò»´ÎĞŞ¸Ä´úÂë¡£
+ * ÔÚ zhangsan ÀàÖĞÔö¼Ó studyAICourse()µÄ·½·¨£¬ÔÚ¸ß²ãÒ²Òª×·¼Óµ÷ÓÃ¡£
  */
 public class Tom1 {
 
     public void studyJavaCourse(){
-        System.out.println("tom åœ¨å­¦ä¹  Java çš„è¯¾ç¨‹");
+        System.out.println("tom ÔÚÑ§Ï° Java µÄ¿Î³Ì");
     }
 
     public void studyPythonCourse(){
-        System.out.println("tom åœ¨å­¦ä¹  Python çš„è¯¾ç¨‹");
+        System.out.println("tom ÔÚÑ§Ï° Python µÄ¿Î³Ì");
     }
 
     public static void main(String[] args) {
