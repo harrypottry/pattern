@@ -7,7 +7,7 @@ import java.util.concurrent.*;
  */
 public class ConcurrentExecutor {
     /**
-     * @param runHandler
+     * @param runHandler 处理函数
      * @param executeCount 发起请求总数
      * @param concurrentCount 同时并发执行的线程数
      * @throws Exception
@@ -36,12 +36,12 @@ public class ConcurrentExecutor {
 //        countDownLatch.await();//线程阻塞，知道闭锁值为0时，阻塞才释放，继续往下执行
 //        executorService.shutdown();
 //    }
-    public static void execute(final RunHandler runHandler, int  executeCount, int concurrentCount) throws InterruptedException {
+    public static void execute(final RunHandler runHandler, int executeCount, int concurrentCount) throws InterruptedException {
         ExecutorService executorService = Executors.newCachedThreadPool();
         Semaphore semaphore = new Semaphore(concurrentCount);
-        CountDownLatch  countDownLatch = new CountDownLatch(executeCount);
+        CountDownLatch countDownLatch = new CountDownLatch(executeCount);
 
-        for (int i =0;i < executeCount;i++) {
+        for (int i = 0;i < executeCount; i++) {
             executorService.execute(()->{
                 try {
                     semaphore.acquire();
@@ -50,14 +50,14 @@ public class ConcurrentExecutor {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                countDownLatch.countDown();
             });
+            countDownLatch.countDown();
         }
         countDownLatch.await();
         executorService.shutdown();
     }
 
-    public interface RunHandler {
+    public interface RunHandler{
         void handler();
     }
 

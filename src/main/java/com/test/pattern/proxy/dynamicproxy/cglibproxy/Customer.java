@@ -5,7 +5,5 @@ package com.test.pattern.proxy.dynamicproxy.cglibproxy;
  */
 public class Customer {
 
-    public void findJob(){
-        System.out.println(" cglib proxy ...");
-    }
+
 }

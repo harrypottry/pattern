@@ -7,8 +7,6 @@ public class FatherProxyTest {
 
     public static void main(String[] args) {
 
-        Father father = new Father(new Son());
-        father.findJob();
 
         //农村，媒婆
         //婚介所

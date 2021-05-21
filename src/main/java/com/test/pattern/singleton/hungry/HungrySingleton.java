@@ -18,17 +18,18 @@ public class HungrySingleton implements Cloneable{
     //先静态、后动态
     //先属性、后方法
     //先上后下
-//    private static final HungrySingleton hungrySingleton = new HungrySingleton();
-//
-//    private HungrySingleton(){}
-//
-//    public static HungrySingleton getInstance(){
-//        return  hungrySingleton;
-//    }
+    private static final HungrySingleton hungrySingleton = new HungrySingleton();
 
-    //@Override
-    //public Object clone() throws CloneNotSupportedException {
-    //    //return instance; 防止破坏方案 或者不实现Cloneable
-    //    return super.clone();
-    //}
+    private HungrySingleton(){}
+
+    public static HungrySingleton getInstance(){
+        return  hungrySingleton;
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        //return instance; 防止破坏方案 或者不实现Cloneable
+        return super.clone();
+//        return hungrySingleton;
+    }
 }

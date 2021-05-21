@@ -7,14 +7,12 @@ import java.util.Date;
 /**
  * Created by zhangsan.
  */
-public class Person extends Properties implements Cloneable,Serializable {
+public class Person  implements Cloneable,Serializable {
 
-    public Position position;
+    public Properties position;
 
     public Person(){
-        //只是初始化
-        this.birthday = new Date();
-        this.position = new Position();
+        this.position = new Properties();
     }
 
     @Override
@@ -23,9 +21,12 @@ public class Person extends Properties implements Cloneable,Serializable {
     }
 
 
+    /**
+     * 深拷贝
+     * @return
+     */
     public Object deepClone(){
         try{
-
             ByteArrayOutputStream bos = new ByteArrayOutputStream();
             ObjectOutputStream oos = new ObjectOutputStream(bos);
             oos.writeObject(this);
@@ -33,27 +34,22 @@ public class Person extends Properties implements Cloneable,Serializable {
             ByteArrayInputStream bis = new ByteArrayInputStream(bos.toByteArray());
             ObjectInputStream ois = new ObjectInputStream(bis);
 
-            Person copy = (Person)ois.readObject();
-            copy.birthday = new Date();
-            return copy;
+            return ois.readObject();
         }catch (Exception e){
             e.printStackTrace();
             return null;
         }
-
     }
 
-
+    /**
+     * 浅拷贝
+     * @param target
+     * @return
+     */
     public Person shallowClone(Person target){
-
         Person person = new Person();
-        person.height = target.height;
-        person.weight = target.weight;
-
         person.position = target.position;
-        person.birthday = new Date();
         return person;
     }
-
 
 }

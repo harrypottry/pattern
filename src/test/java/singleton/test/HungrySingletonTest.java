@@ -1,14 +1,16 @@
 package singleton.test;
 
+import com.test.pattern.proxy.dynamicproxy.jdkproxy.Customer;
 import com.test.pattern.singleton.hungry.HungrySingleton;
 import com.test.pattern.singleton.hungry.HungryStaticSingleton;
+import org.springframework.beans.BeanUtils;
 
 public class HungrySingletonTest {
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) throws CloneNotSupportedException {
 //        //恶汉式单例
-//        HungrySingleton hungrySingleton1 = HungrySingleton.getInstance();
-//        HungrySingleton hungrySingleton2 = HungrySingleton.getInstance();
+        HungrySingleton hungrySingleton1 = HungrySingleton.getInstance();
+        HungrySingleton hungrySingleton2 = HungrySingleton.getInstance();
 //
 //        System.out.println(hungrySingleton1 == hungrySingleton2);
 //
@@ -19,7 +21,7 @@ public class HungrySingletonTest {
 //        System.out.println(hungryStaticSingleton1 == hungryStaticSingleton2);
 
 
-
+        BeanUtils.copyProperties(new Customer(), new Customer());
 
 
 
@@ -50,7 +52,7 @@ public class HungrySingletonTest {
 
 
         //// cloneable 破坏单例模式
-        //HungrySingleton hungrySingletonClone = (HungrySingleton)HungrySingleton.getInstance().clone();
-        //System.out.println(hungrySingleton1 == hungrySingletonClone);
+        HungrySingleton hungrySingletonClone = (HungrySingleton)HungrySingleton.getInstance().clone();
+        System.out.println(hungrySingleton1 == hungrySingletonClone);
     }
 }

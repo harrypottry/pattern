@@ -1,13 +1,12 @@
 package com.test.pattern.prototype.deep;
 
-import java.util.Date;
+import java.io.Serializable;
 
 /**
  * Created by zhangsan.
  */
-public class Properties {
-    public int height;
-    public int weight;
-    public Date birthday;
+public class Properties implements Serializable {
+    public String name;
+    public int age;
 
 }

@@ -12,18 +12,5 @@ import java.lang.reflect.Method;
  */
 public class CglibProxy  {
 
-    public Object getInstance (Class<?> clazz){
-        Enhancer enhancer = new Enhancer();
-        enhancer.setSuperclass(clazz);
-        enhancer.setCallback((MethodInterceptor) (obj, method, args, proxy) -> proxy.invokeSuper(obj, args));
-        return enhancer.create();
-    }
 
-    private void before(){
-        System.out.println("before ...");
-    }
-
-    private void after(){
-        System.out.println("after ...");
-    }
 }
